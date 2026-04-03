@@ -6,7 +6,7 @@ This project is a production-ready, event-driven architecture built on AWS. It a
 
 The entire infrastructure is provisioned as code (IaC) using Terraform, ensuring secure, repeatable, and automated deployments.
 
-## Architecture
+## 🏗️ Architecture
 
 ```mermaid
 graph LR
@@ -22,6 +22,7 @@ graph LR
     style DB fill:#4053D6,stroke:#333,stroke-width:2px,color:#fff
     style SNS fill:#FF9900,stroke:#333,stroke-width:2px,color:#fff
     style Email fill:#f9f9f9,stroke:#333,stroke-width:2px
+
 **The Workflow:**
 
 1. **Amazon S3:** Acts as the trigger. A user uploads a file (e.g., JSON, CSV).

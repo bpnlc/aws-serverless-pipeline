@@ -22,6 +22,7 @@ graph LR
     style DB fill:#4053D6,stroke:#333,stroke-width:2px,color:#fff
     style SNS fill:#FF9900,stroke:#333,stroke-width:2px,color:#fff
     style Email fill:#f9f9f9,stroke:#333,stroke-width:2px
+```
 
 **The Workflow:**
 
@@ -44,4 +45,7 @@ graph LR
 - An AWS Account (Free Tier covers all services used).
 - [AWS CLI](https://aws.amazon.com/cli/) installed and configured with your credentials.
 - [Terraform](https://www.terraform.io/downloads) installed.
+
+```
+
 ```

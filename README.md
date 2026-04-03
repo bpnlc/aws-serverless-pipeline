@@ -6,7 +6,7 @@ This project is a production-ready, event-driven architecture built on AWS. It a
 
 The entire infrastructure is provisioned as code (IaC) using Terraform, ensuring secure, repeatable, and automated deployments.
 
-## 🏗️ Architecture
+## Architecture
 
 ```mermaid
 graph LR
@@ -40,12 +40,8 @@ graph LR
 - **Messaging:** Amazon SNS
 - **Security:** IAM (Least Privilege Execution Roles)
 
-## ⚙️Prerequisites
+## Prerequisites
 
 - An AWS Account (Free Tier covers all services used).
 - [AWS CLI](https://aws.amazon.com/cli/) installed and configured with your credentials.
 - [Terraform](https://www.terraform.io/downloads) installed.
-
-```
-
-```

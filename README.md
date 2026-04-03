@@ -8,8 +8,20 @@ The entire infrastructure is provisioned as code (IaC) using Terraform, ensuring
 
 ## Architecture
 
-_(Note: Insert a screenshot of your architecture diagram here)_
+```mermaid
+graph LR
+    User([User]) -->|Uploads File| S3[(Amazon S3 Bucket)]
+    S3 -->|Triggers Event| Lambda[AWS Lambda Function]
+    Lambda -->|Writes Metadata| DB[(Amazon DynamoDB)]
+    Lambda -->|Publishes Alert| SNS{{Amazon SNS Topic}}
+    SNS -->|Sends Email| Email([Admin Email])
 
+    style User fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style S3 fill:#E1523D,stroke:#333,stroke-width:2px,color:#fff
+    style Lambda fill:#F58536,stroke:#333,stroke-width:2px,color:#fff
+    style DB fill:#4053D6,stroke:#333,stroke-width:2px,color:#fff
+    style SNS fill:#FF9900,stroke:#333,stroke-width:2px,color:#fff
+    style Email fill:#f9f9f9,stroke:#333,stroke-width:2px
 **The Workflow:**
 
 1. **Amazon S3:** Acts as the trigger. A user uploads a file (e.g., JSON, CSV).
@@ -31,3 +43,4 @@ _(Note: Insert a screenshot of your architecture diagram here)_
 - An AWS Account (Free Tier covers all services used).
 - [AWS CLI](https://aws.amazon.com/cli/) installed and configured with your credentials.
 - [Terraform](https://www.terraform.io/downloads) installed.
+```
